@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">10dp</dimen>
+    <dimen name="size_logo">200dp</dimen>
+    <dimen name="rounded_corners">50dp</dimen>
+</resources>

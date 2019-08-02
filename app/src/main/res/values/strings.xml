@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Software House</string>
+    <string name="user_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="sign_in_label">Sign In</string>
+    <string name="forgot_label">Forgot Password</string>
+    <string name="login_facebook_label">Login Via Facebook</string>
+</resources>
