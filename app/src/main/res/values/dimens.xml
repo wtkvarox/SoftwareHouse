@@ -3,4 +3,7 @@
     <dimen name="margin_default">10dp</dimen>
     <dimen name="size_logo">200dp</dimen>
     <dimen name="rounded_corners">50dp</dimen>
+    <dimen name="height_bar">60dp</dimen>
+    <dimen name="title_bar_size">18sp</dimen>
+    <dimen name="default_24dp">24dp</dimen>
 </resources>

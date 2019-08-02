@@ -27,7 +27,6 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/margin_default"
             android:text="Appointment Confirm!"
-            android:textColor="#17C7D1"
             android:textSize="23sp"
             android:textStyle="bold" />
 

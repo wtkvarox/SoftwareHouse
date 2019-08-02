@@ -1,9 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.DetailActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@drawable/gradient_login_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/img_hamburger"
+                android:layout_width="@dimen/default_24dp"
+                android:layout_height="@dimen/default_24dp"
+                android:src="@drawable/hamburger_icon"
+                android:tint="@color/colorWhite" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/img_notification"
+                android:layout_toEndOf="@+id/img_hamburger"
+                android:gravity="center"
+                android:text="@string/doctors_label"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/title_bar_size" />
+
+            <ImageView
+                android:id="@+id/img_notification"
+                android:layout_width="@dimen/default_24dp"
+                android:layout_height="@dimen/default_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_default"
+                android:contentDescription="@null"
+                android:src="@drawable/notification"
+                android:tint="@color/colorWhite" />
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/colorWhite" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_bar"
+        android:background="@drawable/gradient_login_background">
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="@dimen/default_24dp"
+            android:layout_height="@dimen/default_24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_default"
+            android:src="@drawable/search_icon"
+            android:tint="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="30dp"
+            android:layout_toStartOf="@+id/btn_sort_by"
+            android:layout_toEndOf="@+id/img_search"
+            android:gravity="center_vertical|start"
+            android:text="@string/find_doctor_label"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btn_sort_by"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:background="@color/colorFilter"
+            android:drawableEnd="@drawable/down_arrow"
+            android:drawablePadding="@dimen/margin_default"
+            android:drawableTint="@color/colorWhite"
+            android:paddingStart="@dimen/margin_default"
+            android:paddingEnd="@dimen/margin_default"
+            android:text="@string/sort_by_label"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" />
+</LinearLayout>

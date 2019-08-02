@@ -22,13 +22,11 @@ import java.util.List;
 
 public class TabsActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
     private TabLayout tabLayout;
-    private ViewPager viewPager;
     private int[] tabIcons = {
-            R.drawable.padlock,
-            R.drawable.user_profile,
-            R.drawable.padlock
+            R.drawable.checked,
+            R.drawable.checked,
+            R.drawable.success
     };
 
     @Override
@@ -36,13 +34,13 @@ public class TabsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
 
-        toolbar = findViewById(R.id.toolbar);
+        final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         if (getSupportActionBar() != null)
             getSupportActionBar().setTitle(null);
 
-        viewPager = findViewById(R.id.viewpager);
+        final ViewPager viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
         tabLayout = findViewById(R.id.tabs);
@@ -50,12 +48,21 @@ public class TabsActivity extends AppCompatActivity {
         setupTabIcons();
     }
 
+    /**
+     * Configurar iconos
+     */
     private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
         tabLayout.getTabAt(2).setIcon(tabIcons[2]);
     }
 
+
+    /**
+     * Configurar viewpager
+     *
+     * @param viewPager fijar adaptador en ViewPager
+     */
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new InitiateFragment(), "Initiate");
@@ -64,11 +71,14 @@ public class TabsActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
+    /**
+     * Adaptador para ViewPager y mostrar vistas en Fragments
+     */
     class ViewPagerAdapter extends FragmentPagerAdapter {
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
-        public ViewPagerAdapter(FragmentManager manager) {
+        ViewPagerAdapter(FragmentManager manager) {
             super(manager);
         }
 
@@ -82,7 +92,7 @@ public class TabsActivity extends AppCompatActivity {
             return mFragmentList.size();
         }
 
-        public void addFrag(Fragment fragment, String title) {
+        void addFrag(Fragment fragment, String title) {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }

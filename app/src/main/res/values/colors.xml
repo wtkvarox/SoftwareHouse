@@ -10,4 +10,7 @@
     <color name="colorSignIn">#00ABCA</color>
     <color name="colorFacebookLogin">#3855B5</color>
     <color name="colorTabs">#00B2F4</color>
+    <color name="colorBlue">#17C7D1</color>
+    <color name="colorFilter">#0094AF</color>
+    <color name="colorGray">#E0E0E0</color>
 </resources>

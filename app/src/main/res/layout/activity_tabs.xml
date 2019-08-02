@@ -10,44 +10,45 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?android:attr/actionBarSize"
         android:background="@drawable/gradient_login_background">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
 
             <ImageView
                 android:id="@+id/img_back_arrow"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:src="@drawable/left_arrow"
                 android:tint="@color/colorWhite" />
 
             <ImageView
-                android:id="@+id/img_hamburguer"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginStart="@dimen/margin_default"
+                android:id="@+id/img_hamburger"
+                android:layout_width="@dimen/default_24dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
                 android:layout_toEndOf="@+id/img_back_arrow"
                 android:src="@drawable/hamburger_icon"
                 android:tint="@color/colorWhite" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_toStartOf="@+id/img_search"
-                android:layout_toEndOf="@+id/img_hamburguer"
+                android:layout_toEndOf="@+id/img_hamburger"
                 android:gravity="center"
-                android:text="Appointment"
+                android:text="@string/appointment_title_label"
                 android:textColor="@color/colorWhite"
-                android:textSize="20sp" />
+                android:textSize="@dimen/title_bar_size" />
 
             <ImageView
                 android:id="@+id/img_search"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="@dimen/margin_default"
+                android:layout_width="@dimen/default_24dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
                 android:layout_toStartOf="@+id/img_notification"
                 android:src="@drawable/search_icon"
                 android:tint="@color/colorWhite" />
@@ -55,7 +56,7 @@
             <ImageView
                 android:id="@+id/img_notification"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="@dimen/margin_default"
                 android:src="@drawable/notification"
@@ -67,7 +68,7 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/height_bar"
         android:theme="@style/Base.Widget.Design.TabLayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
