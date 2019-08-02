@@ -68,13 +68,20 @@
             android:text="@string/forgot_label"
             android:textColor="@color/colorWhite" />
 
+        <View
+            android:layout_width="50dp"
+            android:layout_height="0.1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorWhite" />
+
         <Button
             android:id="@+id/btn_login_facebook"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/rounded_button_facebook"
             android:onClick="loginOnClickListener"

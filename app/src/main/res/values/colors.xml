@@ -2,11 +2,12 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#00D81B60</color>
 
     <color name="colorGradientEnd">#3B50DD</color>
     <color name="colorGradientStart">#00D592</color>
     <color name="colorWhite">#fff</color>
     <color name="colorSignIn">#00ABCA</color>
     <color name="colorFacebookLogin">#3855B5</color>
+    <color name="colorTabs">#00B2F4</color>
 </resources>

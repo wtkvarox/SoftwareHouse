@@ -36,6 +36,5 @@ public class LoginActivity extends AppCompatActivity {
      */
     public void loginOnClickListener(View view) {
         startActivity(new Intent(this, TabsActivity.class));
-        finish();
     }
 }
